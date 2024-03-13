@@ -20,9 +20,10 @@ export const userSlice = createSlice ({
         state.number = number;
     },
     changeEmail: (state, action) => {
-        const {email} = action.payload;
-        state.email = email;
+        state.email = action.email;
     }
 
   }
 })
+
+export const { addUser, changeEmail } = userSlice.actions;
