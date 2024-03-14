@@ -1,22 +1,22 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
+import { useSelector } from "react-redux";
 
 const Header = () => {
+    "the userSelector receive the global state and from state coming from userSlice file where is the state.user meaning we want justly the state user. The 'user' is the name put where is userSlice file to"
 
-    const user= useSelector((state) => state.user)
+    "(state): coming from index file, it's the Provider component wrapping the app to give the '(state)'"
+    const user = useSelector((state) => state.user)
 
   return (
-    <div>
-        <header>
-            <h1>REDUX TOOLKIT EXAMPLE</h1>
-            <ul>
-                <li>Name: {user.name}</li>
-                <li>Username: {user.username} </li>
-                <li>Email: {user.email}</li>
-                <li>Number: {user.number}</li>
-            </ul>
-        </header>
-    </div>
+    <header>
+        <h1>REDUX TOOLKIT EXAMPLE</h1>
+        <ul>
+            {/* el user.  viene del estado global */}
+            <li>Name: {user.name}</li>
+            <li>Email: {user.email}</li>
+            <li>Username: {user.username}</li>
+        </ul>
+    </header>
   )
 }
 
